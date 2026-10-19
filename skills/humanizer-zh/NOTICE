@@ -1,0 +1,12 @@
+humanizer-zh is a Chinese-language adaptation inspired by:
+
+  blader/humanizer v2.9.1
+  https://github.com/blader/humanizer
+
+The upstream project was created by Siqi Chen and released under the
+MIT License. Its original copyright notice is preserved in LICENSE.
+
+This adaptation keeps the upstream principles of factual preservation,
+voice calibration, and false-positive protection, while redesigning the
+pattern catalog and examples for Chinese writing and Chinese content
+platforms.
