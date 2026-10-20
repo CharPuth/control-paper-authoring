@@ -14,29 +14,50 @@ Identify the specific control difficulty, the method's action, the evidence, and
 
 Use only the moves needed for the paper. Do not force every abstract into four identical sentences. Avoid "a novel, robust, efficient framework" unless each property has a concrete, supported meaning. In language-only revision, do not invent a numerical result to make the abstract appear stronger.
 
-## Introduction: physical problem and control difficulty
+## Introduction: practical significance, prior work, research problem, and approach
 
-- "[Platform or process] requires [control task] during [operation]."
-- "Changes in [operating variable] alter [load or input effectiveness], which affects [tracking variable]."
-- "The coupling between [quantities] makes [specific task] difficult when [condition]."
+Organize the introduction in this order: actual tasks and practical significance; related research and established achievements; remaining issues and the present research question; the proposed method and validation plan. Each part may occupy one or more paragraphs, depending on the material and venue requirements.
 
-Prefer a physical cause and its control consequence over phrases such as "complex multifaceted challenges." Keep the mechanism consistent with the model. Do not add a causal explanation merely because it sounds plausible.
+### 1. Actual tasks and practical significance
 
-## Related work: what a cited method does
+Start with the applications, why the tasks matter, and the relevant capabilities of the platform or system. Establish the practical context before narrowing to a specific technical problem.
 
-- "[Authors] developed [method] for [task]."
-- "The controller in [citation] compensates for [specified uncertainty] using [mechanism]."
-- "These methods address [shared problem] under [reported conditions]."
+- "[Application task] requires [documented capability] under [conditions]."
+- "[Platform class] supports [application] through [documented capability]."
+- "The ability to [capability] is relevant to [specific practical need]."
 
-Connect each citation to a specific method, result, or assumption. Do not call earlier work ineffective or restricted to a narrow regime unless the cited source supports that description. Group papers by a relevant technical distinction, not by interchangeable sentences saying each method is effective.
+For an aerial-aquatic vehicle paper, this can mean explaining documented application needs and how cross-medium capabilities serve them before reviewing platforms and control methods. Use only supported applications and capabilities. A statement that a topic has attracted growing interest needs literature support and should lead to concrete practical relevance. Other platforms follow the same progression with their own tasks and capabilities.
 
-## Gap and motivation
+### 2. Related research and established achievements
 
-- "For [target operation], the controller must account for [specific variation] while [design requirement]."
-- "The remaining problem is [precisely established gap]."
-- "This motivates a controller that [required action]."
+Explain what prior studies developed or demonstrated and how those achievements relate to the task. Group references by relevant research direction or technical approach. Where appropriate, progress from platforms and systems to the control methods directly relevant to the paper.
 
-State a research gap only when the literature review supports it. When that evidence is unavailable, state the paper's design objective instead of inventing a literature-wide deficiency. Avoid "no existing method" and "for the first time" unless verified.
+- "[Authors] developed [platform or method] for [task]."
+- "The system in [citation] achieves [documented capability] using [approach]."
+- "For [related control task], [authors] proposed [method] to address [effect]."
+- "These studies establish [supported capability] under [reported conditions]."
+
+Connect each citation to a specific method, capability, result, or assumption. Distinguish retained platform, sensing, or control components from the present contribution. Select architecture and actuator details for their relevance to the application or the research question that follows.
+
+### 3. Remaining issues and the present research question
+
+Build on the established achievements to identify an unresolved issue under the target task or operating conditions. Explain when it occurs, what it affects, and why existing work does not sufficiently address that particular requirement. Use physical causes and control consequences to make the research question precise.
+
+- "Under [target condition], [supported unresolved issue] remains."
+- "Changes in [physical quantity] affect [controlled behavior] during [operation]."
+- "The resulting problem is to [control objective] while [design requirement]."
+
+Keep the mechanism consistent with the model and the evidence. Attribute limitations to sources that support them. If the literature review does not establish a field-wide gap, state the paper's design problem. Avoid assigning a weakness to every cited study or claiming "no existing method" or "for the first time" without verification.
+
+### 4. The proposed method and validation plan
+
+Introduce the method in direct response to the research question, explain its main idea, and summarize supported contributions and the validation performed. State what the simulations, physical experiments, or other completed evaluations examine. Leave detailed implementation and experimental procedures to their respective sections. An outline of the remaining paper is optional.
+
+- "To address [research problem], we develop [method] that [key action]."
+- "The method accounts for [specified effects] through [supported mechanism]."
+- "We evaluate [property] in [simulation study] and examine [capability] in [experimental study]."
+
+Select the contribution count and validation types from the actual research. These frames do not authorize adding experiments, mechanisms, or claims absent from the supplied materials.
 
 ## Contributions
 

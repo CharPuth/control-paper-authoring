@@ -35,6 +35,8 @@ In an interface that selects skills with `@`, select the corresponding skill. Na
 
 The bundle pays particular attention to distinctions that matter in control papers: controller output versus applied actuator input; reference-model error versus command-tracking error; design intent versus a demonstrated property; bounded parameters versus convergent parameters; and one recorded trial versus repeated-trial statistics. Language editing should preserve these distinctions.
 
+Introductions follow this progression: actual tasks and practical significance → related research and established achievements → remaining issues and the present research question → the proposed method and validation plan. Establish the application value first, then use prior work to narrow the discussion to the paper's problem. Each part may span one or more paragraphs. See the [introduction writing guide](skills/ieee-control-writing/references/manuscript-sections.md#introduction-practical-significance-prior-work-research-problem-and-approach).
+
 For definitions of symbols, parameters, or conditions immediately after an English equation, the main skill uses lowercase `where` and adjusts punctuation accordingly. This convention applies to post-equation explanations. It does not prohibit other uses of `here`, and it is not presented as a mandatory TASE rule.
 
 ## How the six skills work together

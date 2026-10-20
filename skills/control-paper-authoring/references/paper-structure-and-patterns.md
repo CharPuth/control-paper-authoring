@@ -27,24 +27,59 @@ under [condition].
 
 从实验结论中选择最重要的证据，不把所有数字抄入摘要。控制器简称若使用，应在首次出现时给出一致的全称；不要单独使用读者还不了解的C1/C2编号。
 
-## 3. 引言：平台背景服务于控制问题
+## 3. 引言：从实际任务与现实意义展开
 
-引言通常包含背景与相关工作、平台和控制困难、本文方法及验证安排。顺序和段数由材料决定，不强制每篇论文采用固定四段。
+按“实际任务与现实意义 → 相关研究及已有成果 → 尚存问题与本文研究问题 → 本文方法与验证安排”的顺序组织。每个环节可按材料分成一段或多段，段数与篇幅由研究内容和投稿要求决定。
 
-介绍平台时说清与控制问题有关的机构、运动模式和执行器接口。已有平台设计、感知或姿态控制成果应准确引用，避免将原平台成果重复包装为本稿贡献。
+### 3.1 实际任务与现实意义
+
+开篇说明研究对象面向哪些实际任务、这些任务为何值得研究，以及该类系统能够提供什么相关能力。先建立应用价值和研究背景，再逐步进入具体技术问题。
+
+以水空航行器论文为例，可从有依据的应用需求切入，说明其跨介质能力如何服务这些任务，再引出相关平台与控制研究。具体应用领域、功能和优势以作者材料及文献为依据。“受到关注”或“成为研究热点”可以在文献支持时使用，并紧接具体能力与现实意义。将这一展开方式迁移到其他平台时，替换任务、对象和能力，不沿用水空航行器的具体背景。
 
 ```text
-The vehicle combines [components] for [documented modes of motion].
-Figure [reference] shows the vehicle during [observed operation].
-Previous work addresses [specific task] using [relevant method].
-In [target operation], changes in [quantity] affect [quantity].
-We design [method] to track [variables] without retuning [specified settings]
-across [stated conditions].
+[Application task] requires [documented capability] under [conditions].
+[Platform class] supports [application] through [documented capability].
+The ability to [capability] is relevant to [specific practical need].
 ```
 
-文献的作用是支持技术定位，不是显示刊物档次或凑数量。不要在没有检索证据时断言“现有方法均无法……”“首次解决……”。精确说明本稿处理的问题，通常比笼统否定前人更有说服力。
+### 3.2 相关研究与已有成果
 
-平台实物图、结构图应在解释相应对象的正文中被引用；有图注和标签并不等于正文已经引用。
+接着介绍已有研究做了什么、实现了什么，以及与本文任务的关系。按相关的研究方向或技术路径组织文献，可由平台和系统研究逐步过渡到与本稿直接相关的控制方法。每组文献应有共同主题，说明代表性工作的对象、方法、能力或结果。
+
+已有平台设计、感知或姿态控制成果应准确引用，区分本稿采用的已有基础与本稿新增贡献。介绍机构、运动模式和执行器接口时，选择有助于理解应用能力或后续研究问题的信息。
+
+```text
+[Authors] developed [platform or method] for [task].
+The system in [citation] achieves [documented capability] using [approach].
+For [related control task], [authors] proposed [method] to address [effect].
+These studies establish [supported capability] under [reported conditions].
+```
+
+### 3.3 尚存问题与本文研究问题
+
+在已有成果的基础上，指出目标任务或工况中仍需解决的具体问题，并将其收束为本文的研究问题。说明问题发生在什么条件下、影响哪个对象或性能，以及为什么已有研究尚未充分解决这一需求。控制难点在这里结合物理机制、模型关系和文献证据具体展开。
+
+文献中的限制应有相应来源；材料尚不足以支持整个领域的研究空白时，明确本文需要处理的设计问题。避免把每篇文献都写成“存在不足”，也不要凭空使用“现有方法均无法……”或“首次解决……”。
+
+```text
+Under [target condition], [supported unresolved issue] remains.
+Changes in [physical quantity] affect [controlled behavior] during [operation].
+The resulting problem is to [control objective] while [design requirement].
+```
+
+### 3.4 本文方法与验证安排
+
+最后围绕刚提出的研究问题引出本文方法，说明方法的主要思路及其针对的问题，再概括有证据支持的贡献与验证安排。交代仿真、实物试验或其他已完成验证分别考察什么；保留到方法章和实验章再展开的实现细节。贡献的数量与验证类型由实际研究决定，章节安排按需要简述。
+
+```text
+To address [research problem], we develop [method] that [key action].
+The method accounts for [specified effects] through [supported mechanism].
+We evaluate [property] in [simulation study] and examine [capability]
+in [experimental study].
+```
+
+平台实物图、结构图应在解释相应对象的正文中被引用；有图注和标签并不等于正文已经引用。上述句式为可选框架，具体研究事实、引用及验证范围均由当前材料确定。
 
 ## 4. 定义、假设与模型
 
