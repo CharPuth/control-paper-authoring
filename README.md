@@ -28,7 +28,7 @@
 | --- | --- | --- |
 | M01 章节安排 | 从问题、方法和证据安排摘要至结论，或按要求压缩重组 | [structure.md](skills/control-paper-authoring/modules/structure.md) |
 | M02 作者叙事 | 围绕真实优势组织内容，决定叙述重点与结果取舍 | [author-voice.md](skills/control-paper-authoring/modules/author-voice.md)，调用中/英文 anti-defensive-writing |
-| M03 去 AI 味 | 处理含糊、空泛、堆叠、重复和聊天残留 | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md)，调用对应语言的 humanizer |
+| M03 去 AI 味 | 处理防御性表述、身份错位、生僻用词、自造短语，以及含糊、重复和聊天残留 | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md)，调用对应语言的 humanizer |
 | M04 常用句式 | 按定义、假设、推导、设计、实现、观察等功能选择表达 | [ieee-control-writing](skills/ieee-control-writing/SKILL.md) 及三份句式库 |
 | M05 词汇与用法 | 术语、动词搭配、易混概念和语境替换 | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
 | M06 技术与证据 | 保留模型、信号、时序、评价窗口、统计对象和主张含义 | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
@@ -59,6 +59,8 @@
 以真实优势组织论文，不主动罗列缺点，无关弱项可省略。影响核心结论或关键比较的不利结果先询问作者，确认定位与主张后再处理；不通过隐瞒关键事实制造支持。明确的过度范围可收缩并说明改动，存在不确定性时先问作者。
 
 第三方 skill 原件保持完整，M02、M03 明确学术适配规则。技术术语、研究事实、必要条件和实际模板优先于通用文风建议；新冲突不能按文件加载顺序擅自覆盖。
+
+M03 将去 AI 味落实为四类检查：删除无必要的防御和自我贬低，恢复作者直接陈述的口吻，优先使用常用且准确的词，展开自造短语和过度压缩的关系。结果取舍复用 M02，词汇选择复用 M05。必要的科学限定、真实技术对比和准确术语仍保留；这些表达问题不用于判断作者身份。
 
 排版模块按以下优先级执行：定义先于使用 → 靠近首次正文引用 → 同侧连续图表尽量同类相邻 → 按首次引用顺序排列 → 页首先于页尾 → 内部间距按期刊规范全文统一 → 消除明显留白 → 双栏图表下边界尽量对齐。图表与首次引用最多相邻页，中间不得隔一整页；补充内容须有材料依据并与论证有关。完整要求及冲突处理见 [M09](skills/control-paper-authoring/modules/layout.md)。
 

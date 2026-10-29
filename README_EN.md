@@ -29,7 +29,7 @@ IDs identify stable responsibilities. The [active field profile](skills/control-
 | --- | --- | --- |
 | M01 Structure | Arrange sections from the problem, method, and evidence; shorten or restructure | [structure.md](skills/control-paper-authoring/modules/structure.md) |
 | M02 Author narrative | Organize supported strengths and select the narrative focus | [author-voice.md](skills/control-paper-authoring/modules/author-voice.md), using the appropriate anti-defensive skill |
-| M03 Natural language | Resolve vague, inflated, repetitive, or conversational prose | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md), using the appropriate humanizer |
+| M03 Natural language | Address defensive prose, loss of the author perspective, obscure word choices, coined phrases, ambiguity, repetition, and chat residue | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md), using the appropriate humanizer |
 | M04 Sentence patterns | Choose wording for definitions, assumptions, design, derivation, implementation, and results | [ieee-control-writing](skills/ieee-control-writing/SKILL.md) and three pattern files |
 | M05 Vocabulary | Technical terms, collocations, ambiguous concepts, and contextual alternatives | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
 | M06 Meaning and evidence | Preserve models, signals, timing, windows, statistical units, and claim scope | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
@@ -60,6 +60,8 @@ Explanations immediately after an English equation use lowercase `where` in the 
 Organize a paper around supported strengths. Unrelated weaknesses may be omitted without adding a catalogue of shortcomings. Ask the author before handling adverse findings that affect a core conclusion or key comparison, then establish the positioning and claim scope. Do not hide material facts to manufacture support. Clearly excessive scope may be narrowed and reported; uncertainty requires an author question first.
 
 Third-party skills remain intact. M02 and M03 define their academic adaptations. Facts, terminology, necessary conditions, and the actual venue template take priority over general style advice. New conflicts are not resolved by whichever file happens to be loaded last.
+
+M03 checks four recurring problems: unnecessary defensiveness and self-disparagement, a response or debate voice in manuscript prose, unnecessarily obscure words, and coined or compressed phrases that hide meaning. It restores direct author statements and favors familiar, precise words and explicit relationships. Narrative decisions remain with M02 and vocabulary guidance with M05. Necessary scientific qualifications, meaningful technical contrasts, and accurate terms are preserved; these editing cues do not identify who wrote a text.
 
 Layout priorities are: define concepts before use; keep floats close to their first substantive text reference; group consecutive same-side tables with tables and figures with figures; follow first-reference order; prefer page tops over bottoms; use consistent journal-prescribed internal spacing; eliminate conspicuous whitespace; and align the bottoms of float regions across columns when possible. A float and its first reference may be on adjacent pages, but never have a full page between them. Added text must be supported and relevant. See [M09](skills/control-paper-authoring/modules/layout.md) for the full rules and conflict handling.
 
