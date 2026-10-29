@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | English
 
-A bundle for drafting, revising, translating, shortening, and organizing control and robotics papers in English and Chinese. Six installable skills work through eight writing modules. A field profile selects the providers. The supplied profile covers control and robotics; future fields can bind different skills without replacing the control configuration.
+A bundle for drafting, revising, translating, shortening, and organizing control and robotics papers in English and Chinese. Six installable skills work through nine writing modules. A field profile selects the providers. The supplied profile covers control and robotics; future fields can bind different skills without replacing the control configuration.
 
 [Entry point](skills/control-paper-authoring/SKILL.md) · [Profiles](skills/control-paper-authoring/profiles/index.md) · [Changelog](skills/control-paper-authoring/CHANGELOG.md) · [Extension contract](skills/control-paper-authoring/references/maintenance.md) · [Refactoring audit](AUDIT_20261029.md)
 
@@ -21,7 +21,7 @@ a core conclusion or key comparison.
 
 Modules can be requested by name or ID. Existing author confirmations need not be repeated. Invocation syntax, file access, and compilation depend on the host.
 
-## The eight modules
+## The nine modules
 
 IDs identify stable responsibilities. The [active field profile](skills/control-paper-authoring/profiles/control.md) selects their actual files.
 
@@ -34,7 +34,8 @@ IDs identify stable responsibilities. The [active field profile](skills/control-
 | M05 Vocabulary | Technical terms, collocations, ambiguous concepts, and contextual alternatives | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
 | M06 Meaning and evidence | Preserve models, signals, timing, windows, statistical units, and claim scope | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
 | M07 Experiments | Assign roles to completed evaluations and organize comparisons, ablations, figures, and numbers | [experiments.md](skills/control-paper-authoring/modules/experiments.md) |
-| M08 Delivery | Captions, notes, numerical display, references, templates, anonymity, and file checks | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
+| M08 Delivery | Captions, notes, numerical display, references, template selection, anonymity, and file checks | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
+| M09 Layout | Definition order, float proximity and ordering, spacing, whitespace, column alignment, and rendered-page checks | [layout.md](skills/control-paper-authoring/modules/layout.md) |
 
 Vocabulary guidance is editorial synthesis, not a frequency ranking derived from a large corpus. Example platforms, methods, values, or protocols are not facts about the current paper.
 
@@ -45,7 +46,7 @@ The entry point establishes scope and chooses a field before loading modules. Re
 - Every manuscript-writing task reads the target-language anti-defensive skill through M02 before drafting.
 - Drafting and structural revision use M01. Language editing uses M03, which invokes Humanizer in embedded mode and returns final prose unless analysis is requested.
 - M04 selects `model-and-control-patterns.md`, `experiments-and-results.md`, or `manuscript-sections.md` by function. Word choice and collocations use M05.
-- M06 handles technical, statistical, and claim issues; M07 organizes experiments; M08 handles actual figure, reference, or file-delivery work.
+- M06 handles technical, statistical, and claim issues; M07 organizes experiments; M08 handles actual figure, reference, or file-delivery work; M09 handles float placement, spacing, and page layout.
 - [TASE source notes](skills/control-paper-authoring/references/tase-source-notes.md), [IEEE source notes](skills/ieee-control-writing/references/source-basis.md), maintenance instructions, and history are read only for provenance or maintenance tasks.
 
 A version already read in full need not be read again. A new file does not become active merely by appearing in a directory. Calling a skill means reading and applying instructions; the bundle does not include a program that automatically runs every module.
@@ -59,6 +60,8 @@ Explanations immediately after an English equation use lowercase `where` in the 
 Organize a paper around supported strengths. Unrelated weaknesses may be omitted without adding a catalogue of shortcomings. Ask the author before handling adverse findings that affect a core conclusion or key comparison, then establish the positioning and claim scope. Do not hide material facts to manufacture support. Clearly excessive scope may be narrowed and reported; uncertainty requires an author question first.
 
 Third-party skills remain intact. M02 and M03 define their academic adaptations. Facts, terminology, necessary conditions, and the actual venue template take priority over general style advice. New conflicts are not resolved by whichever file happens to be loaded last.
+
+Layout priorities are: define concepts before use; keep floats close to their first substantive text reference; group consecutive same-side tables with tables and figures with figures; follow first-reference order; prefer page tops over bottoms; use consistent journal-prescribed internal spacing; eliminate conspicuous whitespace; and align the bottoms of float regions across columns when possible. A float and its first reference may be on adjacent pages, but never have a full page between them. Added text must be supported and relevant. See [M09](skills/control-paper-authoring/modules/layout.md) for the full rules and conflict handling.
 
 ## Six installable directories
 
@@ -98,6 +101,14 @@ Check conflicts with companion skills and ask me about unresolved choices.
 Update the changelog and both READMEs.
 ```
 
+Layout can be requested separately:
+
+```text
+Use M09 in the control profile to adjust the manuscript layout in priority order.
+Use the venue template, compile, and inspect all rendered pages.
+Any added prose must use the supplied research materials.
+```
+
 For a new provider, reference its actual skill rather than copying its full prompt:
 
 ```text
@@ -106,7 +117,7 @@ provider. Preserve still-applicable unique rules, ask about conflicts,
 and record the change.
 ```
 
-To add a field, create a separate profile with explicit bindings for all eight modules. It may reuse M02 and M03 while selecting other section, sentence, vocabulary, evidence, experiment, or delivery providers. Keep `control` independent. Vocabulary replacement alone does not establish support for a new field; evidence and evaluation standards may also differ.
+To add a field, create a separate profile with explicit bindings for all nine modules. It may reuse M02 and M03 while selecting other section, sentence, vocabulary, evidence, experiment, or delivery providers. Keep `control` independent. Vocabulary replacement alone does not establish support for a new field; evidence and evaluation standards may also differ.
 
 Each module has one primary provider. Conditional extensions declare their path, trigger, language, input/output, and supplement-or-replace relationship. Check internal dependencies and resolve conflicts before registration. The [maintenance contract](skills/control-paper-authoring/references/maintenance.md) supplies the fields and procedure. Record actual changes in the [changelog](skills/control-paper-authoring/CHANGELOG.md). Only control is supplied today.
 

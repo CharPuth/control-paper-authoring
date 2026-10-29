@@ -2,9 +2,9 @@
 
 简体中文 | [English](README_EN.md)
 
-用于中英文控制与机器人论文的起草、润色、翻译、压缩和实验组织。六个可安装 skill 按八个写作模块协作，通过领域配置选择规则。当前提供控制领域配置；新增领域可绑定其他 skill，无需覆盖原有控制规则。
+用于中英文控制与机器人论文的起草、润色、翻译、压缩和实验组织。六个可安装 skill 按九个写作模块协作，通过领域配置选择规则。当前提供控制领域配置；新增领域可绑定其他 skill，无需覆盖原有控制规则。
 
-[主入口](skills/control-paper-authoring/SKILL.md) · [领域配置](skills/control-paper-authoring/profiles/index.md) · [改动日志](skills/control-paper-authoring/CHANGELOG.md) · [维护与扩展](skills/control-paper-authoring/references/maintenance.md) · [本次审计](AUDIT_20261029.md)
+[主入口](skills/control-paper-authoring/SKILL.md) · [领域配置](skills/control-paper-authoring/profiles/index.md) · [改动日志](skills/control-paper-authoring/CHANGELOG.md) · [维护与扩展](skills/control-paper-authoring/references/maintenance.md) · [模块化审计](AUDIT_20261029.md)
 
 ## 快速使用
 
@@ -20,7 +20,7 @@
 
 用户可以按模块指定工作，模块名称不要求精确记忆。已有作者确认无需反复提供。调用语法、文件编辑和编译能力取决于宿主工具。
 
-## 八个模块怎样分工
+## 九个模块怎样分工
 
 模块 ID 表示稳定的职责；真正读取哪个文件由[当前领域配置](skills/control-paper-authoring/profiles/control.md)决定。
 
@@ -33,7 +33,8 @@
 | M05 词汇与用法 | 术语、动词搭配、易混概念和语境替换 | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
 | M06 技术与证据 | 保留模型、信号、时序、评价窗口、统计对象和主张含义 | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
 | M07 实验叙事 | 为已有验证分配职责，组织比较、消融、曲线与数字 | [experiments.md](skills/control-paper-authoring/modules/experiments.md) |
-| M08 图表与交付 | 图注、表注、显示精度、引用、模板、匿名和文件核对 | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
+| M08 图表与交付 | 图注、表注、显示精度、引用、模板选择、匿名和文件核对 | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
+| M09 排版 | 定义顺序、图表邻近与排列、统一间距、留白、双栏对齐和成稿检查 | [layout.md](skills/control-paper-authoring/modules/layout.md) |
 
 词汇模块提供常用表达及场景，没有大样本词频统计，不声称是“高频词排名”。示例中的平台、方法、数据和实验流程不能自动带入当前论文。
 
@@ -44,7 +45,7 @@
 - 所有论文写作在动笔前通过 M02 读取目标语言的去防御性写作 skill。
 - 起草或重组章节读取 M01；语言整理读取 M03。M03 用嵌入模式调用 Humanizer，只交付终稿，用户要求时再给分析。
 - 英文句式按 M04 选择 `model-and-control-patterns.md`、`experiments-and-results.md` 或 `manuscript-sections.md`；词义和搭配读取 M05。
-- 技术歧义、统计或主张问题读取 M06；组织实验读取 M07；实际图表、文献或文件交付读取 M08。
+- 技术歧义、统计或主张问题读取 M06；组织实验读取 M07；实际图表、文献或文件交付读取 M08；图表位置、间距与页面布局读取 M09。
 - [TASE 来源记录](skills/control-paper-authoring/references/tase-source-notes.md)、[IEEE 来源记录](skills/ieee-control-writing/references/source-basis.md)、维护文档和日志只在核查或维护时读取。
 
 已经完整读取的同一版本无需重读。新增文件不会因放进目录就自动生效。“调用 skill”是读取并采用其指令；这里没有自动执行所有模块的调度程序。
@@ -58,6 +59,8 @@
 以真实优势组织论文，不主动罗列缺点，无关弱项可省略。影响核心结论或关键比较的不利结果先询问作者，确认定位与主张后再处理；不通过隐瞒关键事实制造支持。明确的过度范围可收缩并说明改动，存在不确定性时先问作者。
 
 第三方 skill 原件保持完整，M02、M03 明确学术适配规则。技术术语、研究事实、必要条件和实际模板优先于通用文风建议；新冲突不能按文件加载顺序擅自覆盖。
+
+排版模块按以下优先级执行：定义先于使用 → 靠近首次正文引用 → 同侧连续图表尽量同类相邻 → 按首次引用顺序排列 → 页首先于页尾 → 内部间距按期刊规范全文统一 → 消除明显留白 → 双栏图表下边界尽量对齐。图表与首次引用最多相邻页，中间不得隔一整页；补充内容须有材料依据并与论证有关。完整要求及冲突处理见 [M09](skills/control-paper-authoring/modules/layout.md)。
 
 ## 六个安装目录
 
@@ -96,6 +99,13 @@ skills/ieee-control-writing/
 先检查与配套 skill 的冲突，冲突向我确认；更新日志和中英文说明。
 ```
 
+排版可以单独指定：
+
+```text
+请按 control 配置的 M09 调整论文排版，严格按模块的优先级处理。
+使用期刊模板，修改后编译并检查全部页面；需要补充正文时使用已有材料。
+```
+
 已有新 skill 时，优先让模块引用它，而不是复制全文：
 
 ```text
@@ -103,7 +113,7 @@ skills/ieee-control-writing/
 的 M05 提供者；保留尚适用的独有规则，向我确认冲突，并记录变更。
 ```
 
-扩展到其他领域时，新建领域配置并显式绑定八个模块。例如可复用 M02、M03，选择新领域的章节、句式、词汇和证据提供者；原 `control` 配置保持独立。新模块间也通过配置查找规则。只替换词汇不一定完成领域适配，实验与证据标准可能也需替换。
+扩展到其他领域时，新建领域配置并显式绑定九个模块。例如可复用 M02、M03，选择新领域的章节、句式、词汇和证据提供者；原 `control` 配置保持独立。新模块间也通过配置查找规则。只替换词汇不一定完成领域适配，实验与证据标准可能也需替换。
 
 每个模块只有一个主规则提供者，可登记有明确触发条件的扩展。登记信息包括路径、适用语言、输入输出、补充或替换关系及冲突处理。完整步骤和接入字段见[维护约定](skills/control-paper-authoring/references/maintenance.md)。后续实际改动记录到[日志](skills/control-paper-authoring/CHANGELOG.md)。
 

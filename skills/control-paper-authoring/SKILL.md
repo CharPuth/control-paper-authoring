@@ -4,9 +4,9 @@ description: >-
   Draft, revise, translate, shorten, and organize English or Chinese control and
   robotics papers from author-provided research facts. Route section structure,
   author narrative, natural language, sentence patterns, vocabulary, evidence,
-  experiments, and delivery through task-specific modules. Default to the control
+  experiments, delivery, and layout through task-specific modules. Default to the control
   profile; use another registered field profile only when explicitly selected.
-  Use for 控制论文写作、IEEE论文润色、论文去AI味、模块化论文修改.
+  Use for 控制论文写作、IEEE论文润色、论文去AI味、模块化论文修改、论文排版.
 ---
 
 # 控制论文作者写作
@@ -35,7 +35,8 @@ description: >-
 | M05 | 常用词汇与使用场景 | 术语选择、搭配、翻译或含糊词义；不宣称已有词频统计 |
 | M06 | 技术含义与证据 | 技术或统计内容起草、实质修订，或发现相应语义疑点 |
 | M07 | 仿真与实验叙事 | 安排验证、对比、消融、结果解释和正文数字 |
-| M08 | 图表、文献与交付 | 图表说明、格式、引用、匿名、文件编辑和交付检查 |
+| M08 | 图表、文献与交付 | 图表说明、数值格式、引用、匿名、文件编辑和交付核对 |
+| M09 | 排版 | 定义与使用顺序、图表位置及排列、间距、留白、双栏对齐和成稿视觉检查 |
 
 按当前配置解析模块间的 Mxx 引用，再读取实际文件；不从目录扫描所有技能。先读所用 skill 的 SKILL.md，参考资料按需读取，当前上下文完整读过的版本不重读。文件不可用时说明缺少哪部分，并继续不依赖它的工作；不自动安装。
 
@@ -43,7 +44,7 @@ description: >-
 
 ## 写作与交付
 
-围绕问题、方法和证据组织材料。只改已识别的问题，不为统一句长、替换同义词或增加变化而重写正确表达。交付前按篇幅核对作者口吻、术语句式和含义守恒；文件、引用及版式检查遵循 M08 与宿主要求，报告实际完成范围。
+围绕问题、方法和证据组织材料。只改已识别的问题，不为统一句长、替换同义词或增加变化而重写正确表达。交付前按篇幅核对作者口吻、术语句式和含义守恒；文件与引用核对遵循 M08，版式与视觉检查遵循 M09 及宿主要求，报告实际完成范围。
 
 返回可用正文或修改指定文件。用户要求对照时列“位置、原句、具体问题、新句”，真实矛盾与关键缺项另列。
 
