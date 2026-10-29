@@ -1,4 +1,4 @@
 interface:
   display_name: "控制论文作者写作"
-  short_description: "融合IEEE控制论文句式、作者视角与中英文去AI味规则，保留研究事实和证据边界"
+  short_description: "按模块调用写作习惯、词汇、作者叙事与中英文去AI味规则，保留研究含义"
   default_prompt: "请使用 $control-paper-authoring，依据我提供的研究事实，以作者视角起草或修改控制论文，使用清楚、常见的学术表达，并保持方法与数据不变。"

@@ -2,13 +2,13 @@
 
 [简体中文](README.md) | English
 
-A bundle for drafting, revising, translating, shortening, and organizing control and robotics papers in English and Chinese. Six installable skills work through nine writing modules. A field profile selects the providers. The supplied profile covers control and robotics; future fields can bind different skills without replacing the control configuration.
+A bundle for drafting, revising, translating, shortening, and organizing control and robotics papers in English and Chinese. Seven installable skills work through nine writing modules. A field profile selects the providers. The supplied profile covers control and robotics; future fields can bind different skills without replacing the control configuration.
 
 [Entry point](skills/control-paper-authoring/SKILL.md) · [Profiles](skills/control-paper-authoring/profiles/index.md) · [Changelog](skills/control-paper-authoring/CHANGELOG.md) · [Extension contract](skills/control-paper-authoring/references/maintenance.md) · [Refactoring audit](AUDIT_20261029.md)
 
 ## Quickstart
 
-Install all six sibling directories under `skills/`. Supply the manuscript or research materials, target language, permitted scope, and content to preserve.
+Install all seven sibling directories under `skills/`. Supply the manuscript or research materials, target language, permitted scope, and content to preserve.
 
 ```text
 Use $control-paper-authoring to polish the attached English control paper.
@@ -30,14 +30,16 @@ IDs identify stable responsibilities. The [active field profile](skills/control-
 | M01 Structure | Arrange sections from the problem, method, and evidence; shorten or restructure | [structure.md](skills/control-paper-authoring/modules/structure.md) |
 | M02 Author narrative | Organize supported strengths and select the narrative focus | [author-voice.md](skills/control-paper-authoring/modules/author-voice.md), using the appropriate anti-defensive skill |
 | M03 Natural language | Address defensive prose, loss of the author perspective, obscure word choices, coined phrases, ambiguity, repetition, and chat residue | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md), using the appropriate humanizer |
-| M04 Sentence patterns | Choose wording for definitions, assumptions, design, derivation, implementation, and results | [ieee-control-writing](skills/ieee-control-writing/SKILL.md) and three pattern files |
-| M05 Vocabulary | Technical terms, collocations, ambiguous concepts, and contextual alternatives | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
+| M04 Style and sentence patterns | 17 general rules, seven functional groups of sentence frames, and manuscript teaching examples | [control-paper-writing-style](skills/control-paper-writing-style/SKILL.md) |
+| M05 Vocabulary | 51 groups of contextual vocabulary, general and manuscript examples, and terminology distinctions | [control-paper-vocabulary](skills/control-paper-vocabulary/SKILL.md) |
 | M06 Meaning and evidence | Preserve models, signals, timing, windows, statistical units, and claim scope | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
 | M07 Experiments | Assign roles to completed evaluations and organize comparisons, ablations, figures, and numbers | [experiments.md](skills/control-paper-authoring/modules/experiments.md) |
 | M08 Delivery | Captions, notes, numerical display, references, template selection, anonymity, and file checks | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
 | M09 Layout | Definition order, float proximity and ordering, spacing, whitespace, column alignment, and rendered-page checks | [layout.md](skills/control-paper-authoring/modules/layout.md) |
 
-Vocabulary guidance is editorial synthesis, not a frequency ranking derived from a large corpus. Example platforms, methods, values, or protocols are not facts about the current paper.
+Vocabulary guidance is editorial synthesis, not a field-wide frequency ranking. The new teaching material records 20 abstracts (3,193 English lexical tokens) and six sampled full-text readings across six venues, with a focus on MPC, learning control, navigation, and formations. The two TAC sources and editorial guidance retained from the old provider are documented in [M04 sources](skills/control-paper-writing-style/references/sources.md); the newer corpus is listed in [M05 sources](skills/control-paper-vocabulary/references/sources.md). This migration did not add a large-scale literature study.
+
+At the author’s request, manuscript examples retain their method names, values, and scenarios to explain language choices. Details added in recommended revisions depend on that manuscript’s context. A new paper reuses the linguistic lesson, not those research settings. Both providers distinguish grammatical or collocation problems, terminology or reference problems, and optional improvements; correct originals may be retained.
 
 ## What gets read
 
@@ -45,9 +47,9 @@ The entry point establishes scope and chooses a field before loading modules. Re
 
 - Every manuscript-writing task reads the target-language anti-defensive skill through M02 before drafting.
 - Drafting and structural revision use M01. Language editing uses M03, which invokes Humanizer in embedded mode and returns final prose unless analysis is requested.
-- M04 selects `model-and-control-patterns.md`, `experiments-and-results.md`, or `manuscript-sections.md` by function. Word choice and collocations use M05.
+- M04 uses `writing-rules.md` for relevant language rules, `sentence-patterns.md` for drafting or finding a functional frame, and `style-examples.md` for teaching. It does not supply section templates. M05 selects `vocabulary.md`, `contrastive-examples.md`, or `manuscript-examples.md` as needed; ordinary editing does not load every example.
 - M06 handles technical, statistical, and claim issues; M07 organizes experiments; M08 handles actual figure, reference, or file-delivery work; M09 handles float placement, spacing, and page layout.
-- [TASE source notes](skills/control-paper-authoring/references/tase-source-notes.md), [IEEE source notes](skills/ieee-control-writing/references/source-basis.md), maintenance instructions, and history are read only for provenance or maintenance tasks.
+- [TASE source notes](skills/control-paper-authoring/references/tase-source-notes.md), [sentence-pattern sources](skills/control-paper-writing-style/references/sources.md), maintenance instructions, and history are read only for provenance or maintenance tasks.
 
 A version already read in full need not be read again. A new file does not become active merely by appearing in a directory. Calling a skill means reading and applying instructions; the bundle does not include a program that automatically runs every module.
 
@@ -55,7 +57,7 @@ A version already read in full need not be read again. A new file does not becom
 
 Introductions progress from practical tasks and significance to prior achievements, remaining issues and the research question, then the proposed method and validation. Paragraph count follows the material.
 
-Explanations immediately after an English equation use lowercase `where` in the same sentence, with corresponding punctuation. This is a bundle convention, not an IEEE mandate. Explanatory prose generally avoids dashes; numerical ranges, mathematical notation, and established terms retain meaningful connectors.
+Explanations immediately after an English equation must use lowercase `where` in the same sentence, with corresponding punctuation. This is a bundle convention, not an IEEE mandate. Explanatory prose generally avoids dashes; numerical ranges, mathematical notation, and established terms retain meaningful connectors.
 
 Organize a paper around supported strengths. Unrelated weaknesses may be omitted without adding a catalogue of shortcomings. Ask the author before handling adverse findings that affect a core conclusion or key comparison, then establish the positioning and claim scope. Do not hide material facts to manufacture support. Clearly excessive scope may be narrowed and reported; uncertainty requires an author question first.
 
@@ -65,12 +67,13 @@ M03 checks four recurring problems: unnecessary defensiveness and self-disparage
 
 Layout priorities are: define concepts before use; keep floats close to their first substantive text reference; group consecutive same-side tables with tables and figures with figures; follow first-reference order; prefer page tops over bottoms; use consistent journal-prescribed internal spacing; eliminate conspicuous whitespace; and align the bottoms of float regions across columns when possible. A float and its first reference may be on adjacent pages, but never have a full page between them. Added text must be supported and relevant. See [M09](skills/control-paper-authoring/modules/layout.md) for the full rules and conflict handling.
 
-## Six installable directories
+## Seven installable directories
 
 | Directory | Role |
 | --- | --- |
 | `control-paper-authoring` | Entry point, modules, field profiles, maintenance contract, and changelog |
-| `ieee-control-writing` | Control-paper English patterns, vocabulary, and sources |
+| `control-paper-writing-style` | General rules, functional sentence frames, manuscript examples, and sources |
+| `control-paper-vocabulary` | 51 contextual vocabulary groups, general and manuscript examples, and corpus sources |
 | `anti-defensive-writing` | Chinese author narrative provider |
 | `anti-defensive-writing-en` | English author narrative provider |
 | `humanizer` | English natural language, with upstream metadata and maintenance files |
@@ -87,9 +90,14 @@ skills/control-paper-authoring/
 ├── references/      # Maintenance and provenance
 └── agents/          # UI metadata
 
-skills/ieee-control-writing/
+skills/control-paper-writing-style/
 ├── SKILL.md
-├── references/      # Three pattern files, vocabulary, provenance
+├── references/      # General rules, functional frames, manuscript examples, sources
+└── agents/
+
+skills/control-paper-vocabulary/
+├── SKILL.md
+├── references/      # Vocabulary, general contrasts, manuscript examples, sources
 └── agents/
 ```
 
@@ -135,7 +143,7 @@ The writing instructions themselves need no Python, Node.js, or project-specific
 ### Codex: install the complete bundle manually
 
 1. Select **Code → Download ZIP** on this GitHub repository and extract it, or clone the repository.
-2. Copy all six directories from `skills/` into the user skills directory, `~/.agents/skills/`. On Windows this is typically `C:\Users\YOUR_USERNAME\.agents\skills\`.
+2. Copy all seven directories from `skills/` into the user skills directory, `~/.agents/skills/`. On Windows this is typically `C:\Users\YOUR_USERNAME\.agents\skills\`.
 3. Keep the directories as siblings. If skills with the same names already exist, compare or back up those versions before updating them.
 4. Invoke `control-paper-authoring` in the skill selector or a new conversation. If it does not appear, check the directory layout and restart Codex.
 
@@ -144,32 +152,40 @@ The installed layout should be:
 ```text
 ~/.agents/skills/
 ├── control-paper-authoring/SKILL.md
-├── ieee-control-writing/SKILL.md
+├── control-paper-writing-style/SKILL.md
+├── control-paper-vocabulary/SKILL.md
 ├── anti-defensive-writing/SKILL.md
 ├── anti-defensive-writing-en/SKILL.md
 ├── humanizer/SKILL.md
 └── humanizer-zh/SKILL.md
 ```
 
-Copying the entire repository into the skills directory leaves an extra `skills/` level. The main skill reads companions through paths such as `../skill-name/SKILL.md`, so keep the six skill directories at the same level.
+Copying the entire repository into the skills directory leaves an extra `skills/` level. The main skill reads companions through paths such as `../skill-name/SKILL.md`, so keep the seven skill directories at the same level.
 
 For use within one code repository, install them under that repository's `.agents/skills/`. See the [official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills) for local discovery and invocation details.
 
+### Upgrading an older bundle
+
+Replacing the M04 and M05 providers changes the complete bundle from six directories to seven. Back up or compare custom changes, then install the seven directories above. After verifying the new configuration, move the old `ieee-control-writing` out of the host’s skill-discovery directory to avoid stale invocations. Do not simply overlay the new files on the old bundle.
+
+Reusable sentence frames and missing collocations have migrated to the new providers, and the author’s manuscript examples remain. The from/to/by examples now distinguish an endpoint from an amount of change. Both new providers require lowercase `where` for post-equation explanations, whether used independently or through the entry point.
+
 ### Codex: ask the installer
 
-Provide the current GitHub repository URL to Codex and explicitly request all six skills:
+Provide the current GitHub repository URL to Codex and explicitly request all seven skills:
 
 ```text
-Use $skill-installer to install these six directories from skills/ in
+Use $skill-installer to install these seven directories from skills/ in
 the repository URL I provided: control-paper-authoring,
-ieee-control-writing, anti-defensive-writing, anti-defensive-writing-en,
+control-paper-writing-style, control-paper-vocabulary,
+anti-defensive-writing, anti-defensive-writing-en,
 humanizer, and humanizer-zh. Keep them as sibling directories.
 If a skill already exists, compare versions and preserve local changes.
 ```
 
 ### Other AI tools
 
-Place the six directories in the tool's supported local skill location, preserve the directory relationships, and use that tool's invocation syntax. A general chat interface needs access to the full instructions and required references to follow this workflow. Whether uploading a ZIP installs a skill depends on the platform.
+Place the seven directories in the tool's supported local skill location, preserve the directory relationships, and use that tool's invocation syntax. A general chat interface needs access to the full instructions and required references to follow this workflow. Whether uploading a ZIP installs a skill depends on the platform.
 
 
 ## Delivery, sources, and license

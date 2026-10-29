@@ -1,0 +1,4 @@
+interface:
+  display_name: "控制论文高频词汇及其使用场景"
+  short_description: "按控制论文研究场景选择常用动词、固定搭配，并提供正反面例句"
+  default_prompt: "使用 $control-paper-vocabulary 修改以下控制论文的用词，并说明适用场景、常见搭配和正反例。"

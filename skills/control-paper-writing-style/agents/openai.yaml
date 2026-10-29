@@ -1,0 +1,4 @@
+interface:
+  display_name: "控制论文写作习惯"
+  short_description: "优化控制论文通用句式、时态语态、指代与术语一致性，不含章节模板"
+  default_prompt: "使用 $control-paper-writing-style 润色以下控制论文文字，只调整通用写作表达，不套用章节模板。"

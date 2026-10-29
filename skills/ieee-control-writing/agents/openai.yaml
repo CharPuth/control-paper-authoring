@@ -1,4 +1,0 @@
-interface:
-  display_name: "IEEE Control Paper Writing"
-  short_description: "Clear, natural English for control-systems papers"
-  default_prompt: "Use $ieee-control-writing to revise this manuscript with common IEEE control terminology and clear, natural sentence structures while preserving its technical content."

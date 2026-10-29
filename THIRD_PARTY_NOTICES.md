@@ -30,10 +30,12 @@
 
 ## 控制论文写作与研究文献
 
-`control-paper-authoring` 和 `ieee-control-writing` 提供控制论文的任务组织、作者视角、专业语义约束及句式参考。
+`control-paper-authoring`、`control-paper-writing-style` 和 `control-paper-vocabulary` 提供任务组织、作者视角、通用语言规则、句式、词汇及教学案例。原创编写与归纳部分适用根目录 MIT 许可。
 
-- IEEE 句式的初始语料与短引文见 [`source-basis.md`](skills/ieee-control-writing/references/source-basis.md)。
+- 旧版两篇 TAC 来源及迁移说明见 [句式来源记录](skills/control-paper-writing-style/references/sources.md)。
+- 新教材的 20 篇摘要和 6 篇正文抽读范围见 [词汇语料记录](skills/control-paper-vocabulary/references/sources.md)；不宣称全领域频次排名。
+- 作者要求保留其论文 2026402288.pdf 的选定原句、正反例和场景作为教材，并明确要求随本次版本同步到公开仓库；本包不包含该论文完整 PDF 或实验数据。论文片段及方法事实不作为其他论文的默认内容。
 - TASE 实验叙事的实例与来源见 [`tase-source-notes.md`](skills/control-paper-authoring/references/tase-source-notes.md)。
 - 参考文献的作者及出版方保留对其原作的权利。链接到这些论文用于说明写作参考依据，不表示作者或刊会认可、参与或背书本项目。
 
-所有配套技能路径保持可移植。第三方技能原件本次未修改；控制与 IEEE 写作规则经过模块化整理，变化见改动日志。
+所有配套技能路径保持可移植。四个第三方技能原件本次未修改；项目自有写作习惯与词汇技能接替旧提供者，变化见改动日志。

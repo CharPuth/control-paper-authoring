@@ -2,13 +2,13 @@
 
 简体中文 | [English](README_EN.md)
 
-用于中英文控制与机器人论文的起草、润色、翻译、压缩和实验组织。六个可安装 skill 按九个写作模块协作，通过领域配置选择规则。当前提供控制领域配置；新增领域可绑定其他 skill，无需覆盖原有控制规则。
+用于中英文控制与机器人论文的起草、润色、翻译、压缩和实验组织。七个可安装 skill 按九个写作模块协作，通过领域配置选择规则。当前提供控制领域配置；新增领域可绑定其他 skill，无需覆盖原有控制规则。
 
 [主入口](skills/control-paper-authoring/SKILL.md) · [领域配置](skills/control-paper-authoring/profiles/index.md) · [改动日志](skills/control-paper-authoring/CHANGELOG.md) · [维护与扩展](skills/control-paper-authoring/references/maintenance.md) · [模块化审计](AUDIT_20261029.md)
 
 ## 快速使用
 
-安装 `skills/` 下全部六个同级目录，提供正文或研究材料、目标语言、任务范围和必须保留的内容。例如：
+安装 `skills/` 下全部七个同级目录，提供正文或研究材料、目标语言、任务范围和必须保留的内容。例如：
 
 ```text
 请使用 $control-paper-authoring 润色附件中的英文控制论文。
@@ -29,14 +29,16 @@
 | M01 章节安排 | 从问题、方法和证据安排摘要至结论，或按要求压缩重组 | [structure.md](skills/control-paper-authoring/modules/structure.md) |
 | M02 作者叙事 | 围绕真实优势组织内容，决定叙述重点与结果取舍 | [author-voice.md](skills/control-paper-authoring/modules/author-voice.md)，调用中/英文 anti-defensive-writing |
 | M03 去 AI 味 | 处理防御性表述、身份错位、生僻用词、自造短语，以及含糊、重复和聊天残留 | [natural-language.md](skills/control-paper-authoring/modules/natural-language.md)，调用对应语言的 humanizer |
-| M04 常用句式 | 按定义、假设、推导、设计、实现、观察等功能选择表达 | [ieee-control-writing](skills/ieee-control-writing/SKILL.md) 及三份句式库 |
-| M05 词汇与用法 | 术语、动词搭配、易混概念和语境替换 | [vocabulary-and-usage.md](skills/ieee-control-writing/references/vocabulary-and-usage.md) |
+| M04 句式与写作习惯 | 17 类通用规则、七类语言功能句式及原稿正反面教材 | [control-paper-writing-style](skills/control-paper-writing-style/SKILL.md) |
+| M05 词汇与用法 | 51 组场景词汇、通用与原稿正反例、术语区分 | [control-paper-vocabulary](skills/control-paper-vocabulary/SKILL.md) |
 | M06 技术与证据 | 保留模型、信号、时序、评价窗口、统计对象和主张含义 | [evidence.md](skills/control-paper-authoring/modules/evidence.md) |
 | M07 实验叙事 | 为已有验证分配职责，组织比较、消融、曲线与数字 | [experiments.md](skills/control-paper-authoring/modules/experiments.md) |
 | M08 图表与交付 | 图注、表注、显示精度、引用、模板选择、匿名和文件核对 | [delivery.md](skills/control-paper-authoring/modules/delivery.md) |
 | M09 排版 | 定义顺序、图表邻近与排列、统一间距、留白、双栏对齐和成稿检查 | [layout.md](skills/control-paper-authoring/modules/layout.md) |
 
-词汇模块提供常用表达及场景，没有大样本词频统计，不声称是“高频词排名”。示例中的平台、方法、数据和实验流程不能自动带入当前论文。
+词汇模块提供常用表达及场景，不声称是全领域“高频词排名”。新教材的记录为 20 篇摘要（3193 个英文词法单元）及 6 篇正文抽读，覆盖六个刊会，样本偏向 MPC、学习控制、导航和编队。旧技能两篇 TAC 来源及编辑归纳在 [M04 来源](skills/control-paper-writing-style/references/sources.md) 中保留；完整新语料清单见 [M05 来源](skills/control-paper-vocabulary/references/sources.md)。本次是迁移，未增加大规模语料检索。
+
+按作者要求保留原论文正反面教材，包括方法名、数字和场景，用来解释语言选择。推荐写法中补全的对象或范围依赖原稿上下文；下一篇论文复用表达经验，不继承这些研究设置。两套技能区分语法/搭配问题、术语/指代问题和可选优化，正确原句可以保留。
 
 ## 一次任务会读取什么
 
@@ -44,9 +46,9 @@
 
 - 所有论文写作在动笔前通过 M02 读取目标语言的去防御性写作 skill。
 - 起草或重组章节读取 M01；语言整理读取 M03。M03 用嵌入模式调用 Humanizer，只交付终稿，用户要求时再给分析。
-- 英文句式按 M04 选择 `model-and-control-patterns.md`、`experiments-and-results.md` 或 `manuscript-sections.md`；词义和搭配读取 M05。
+- M04 先按需读取 `writing-rules.md`；起草或找句型时读 `sentence-patterns.md`，教学时读 `style-examples.md`。它按语言功能组织，不含章节模板。M05 按需读取 `vocabulary.md`、`contrastive-examples.md` 或 `manuscript-examples.md`；普通润色不自动加载全部案例。
 - 技术歧义、统计或主张问题读取 M06；组织实验读取 M07；实际图表、文献或文件交付读取 M08；图表位置、间距与页面布局读取 M09。
-- [TASE 来源记录](skills/control-paper-authoring/references/tase-source-notes.md)、[IEEE 来源记录](skills/ieee-control-writing/references/source-basis.md)、维护文档和日志只在核查或维护时读取。
+- [TASE 来源记录](skills/control-paper-authoring/references/tase-source-notes.md)、[句式来源记录](skills/control-paper-writing-style/references/sources.md)、维护文档和日志只在核查或维护时读取。
 
 已经完整读取的同一版本无需重读。新增文件不会因放进目录就自动生效。“调用 skill”是读取并采用其指令；这里没有自动执行所有模块的调度程序。
 
@@ -54,7 +56,7 @@
 
 引言按实际任务与现实意义、相关研究与已有成果、尚存问题与本文研究问题、本文方法与验证安排展开，段数随内容安排。
 
-英文公式后的符号、参数或条件解释用小写 `where`，与公式构成同一句并调整标点。这是本项目约定，不是 IEEE 强制要求。正文解释尽量不用破折号，保留数值范围、数学符号和固定术语所需连接号。
+英文公式后的符号、参数或条件解释必须用小写 `where`，与公式构成同一句并调整标点。这是本项目约定，不是 IEEE 强制要求。正文解释尽量不用破折号，保留数值范围、数学符号和固定术语所需连接号。
 
 以真实优势组织论文，不主动罗列缺点，无关弱项可省略。影响核心结论或关键比较的不利结果先询问作者，确认定位与主张后再处理；不通过隐瞒关键事实制造支持。明确的过度范围可收缩并说明改动，存在不确定性时先问作者。
 
@@ -64,12 +66,13 @@ M03 将去 AI 味落实为四类检查：删除无必要的防御和自我贬低
 
 排版模块按以下优先级执行：定义先于使用 → 靠近首次正文引用 → 同侧连续图表尽量同类相邻 → 按首次引用顺序排列 → 页首先于页尾 → 内部间距按期刊规范全文统一 → 消除明显留白 → 双栏图表下边界尽量对齐。图表与首次引用最多相邻页，中间不得隔一整页；补充内容须有材料依据并与论证有关。完整要求及冲突处理见 [M09](skills/control-paper-authoring/modules/layout.md)。
 
-## 六个安装目录
+## 七个安装目录
 
 | 目录 | 作用 |
 | --- | --- |
 | `control-paper-authoring` | 主入口、模块、领域配置、维护约定和日志 |
-| `ieee-control-writing` | 控制英文句式、词汇与来源 |
+| `control-paper-writing-style` | 通用写作规则、语言功能句式、原稿正反面教材与来源 |
+| `control-paper-vocabulary` | 51 组词汇搭配、场景、通用与原稿教学例及来源 |
 | `anti-defensive-writing` | 中文作者叙事的配套技能 |
 | `anti-defensive-writing-en` | 英文作者叙事的配套技能 |
 | `humanizer` | 英文自然表达，保留原插件元数据和维护资料 |
@@ -86,9 +89,14 @@ skills/control-paper-authoring/
 ├── references/      # 维护约定、来源记录
 └── agents/          # 界面元数据
 
-skills/ieee-control-writing/
+skills/control-paper-writing-style/
 ├── SKILL.md
-├── references/      # 三份句式库、词汇模块、来源记录
+├── references/      # 通用规则、语言功能句式、原稿教材、来源
+└── agents/
+
+skills/control-paper-vocabulary/
+├── SKILL.md
+├── references/      # 场景词库、通用正反例、原稿教材、语料来源
 └── agents/
 ```
 
@@ -131,8 +139,8 @@ skills/ieee-control-writing/
 ### Codex：手动安装完整合集
 
 1. 在 GitHub 仓库页面选择 **Code → Download ZIP**，并解压；也可以克隆仓库。
-2. 将仓库 `skills/` 下的六个目录复制到用户技能目录 `~/.agents/skills/`。Windows 中通常为 `C:\Users\你的用户名\.agents\skills\`。
-3. 保持六个目录同级。目标目录已有同名技能时，先比较或备份已有版本，再更新。
+2. 将仓库 `skills/` 下的七个目录复制到用户技能目录 `~/.agents/skills/`。Windows 中通常为 `C:\Users\你的用户名\.agents\skills\`。
+3. 保持七个目录同级。目标目录已有同名技能时，先比较或备份已有版本，再更新。
 4. 在技能选择器或新对话中调用 `control-paper-authoring`。没有出现时，检查目录层级并重启 Codex。
 
 正确的安装结果：
@@ -140,31 +148,38 @@ skills/ieee-control-writing/
 ```text
 ~/.agents/skills/
 ├── control-paper-authoring/SKILL.md
-├── ieee-control-writing/SKILL.md
+├── control-paper-writing-style/SKILL.md
+├── control-paper-vocabulary/SKILL.md
 ├── anti-defensive-writing/SKILL.md
 ├── anti-defensive-writing-en/SKILL.md
 ├── humanizer/SKILL.md
 └── humanizer-zh/SKILL.md
 ```
 
-将整个仓库目录放进技能目录，会多出一层 `skills/`，与本合集的安装结构不符。主技能通过 `../技能名/SKILL.md` 读取配套技能，因此六个目录的同级关系需要保留。
+将整个仓库目录放进技能目录，会多出一层 `skills/`，与本合集的安装结构不符。主技能通过 `../技能名/SKILL.md` 读取配套技能，因此七个目录的同级关系需要保留。
 
 只希望在某个代码仓库内使用时，可以安装到该仓库的 `.agents/skills/`。Codex 的本地技能位置、自动发现和调用方式见 [OpenAI 官方技能文档](https://learn.chatgpt.com/docs/build-skills)。
 
+### 从旧版升级
+
+本次 M04、M05 替换将完整合集从六个目录改为七个。先备份或比较自定义内容，再安装上述七个目录；确认新配置可用后，将旧 `ieee-control-writing` 移出宿主自动发现的技能目录，避免继续误调用。不要只把新文件叠加到旧包中。
+
+旧版通用句式及尚未覆盖的搭配已迁入新提供者，原稿教学案例保留。from/to/by 教学明确区分终值与变化量；两套新技能在独立使用和被主入口调用时均要求公式后解释使用小写 `where`。
+
 ### Codex：让安装器处理
 
-将当前 GitHub 仓库链接提供给 Codex，并明确要求安装全部六个技能：
+将当前 GitHub 仓库链接提供给 Codex，并明确要求安装全部七个技能：
 
 ```text
-请使用 $skill-installer，从我提供的仓库链接安装 skills/ 下的六个技能：
-control-paper-authoring、ieee-control-writing、anti-defensive-writing、
-anti-defensive-writing-en、humanizer、humanizer-zh。
-保持六个目录同级。如果已有同名技能，先比较版本并保留本地修改。
+请使用 $skill-installer，从我提供的仓库链接安装 skills/ 下的七个技能：
+control-paper-authoring、control-paper-writing-style、control-paper-vocabulary、
+anti-defensive-writing、anti-defensive-writing-en、humanizer、humanizer-zh。
+保持七个目录同级。如果已有同名技能，先比较版本并保留本地修改。
 ```
 
 ### 其他 AI 工具
 
-将六个目录放到该工具支持的本地技能位置，保持目录关系，并使用其对应的调用语法。普通聊天界面只有在能够读取完整规则及所需参考文件时，才具备执行这套流程的材料；上传 ZIP 是否会安装技能，需要以该平台的实际能力为准。
+将七个目录放到该工具支持的本地技能位置，保持目录关系，并使用其对应的调用语法。普通聊天界面只有在能够读取完整规则及所需参考文件时，才具备执行这套流程的材料；上传 ZIP 是否会安装技能，需要以该平台的实际能力为准。
 
 
 ## 交付、来源与许可
