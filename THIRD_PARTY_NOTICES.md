@@ -10,7 +10,7 @@
 - 许可：MIT；完整文本分别保留在两个技能目录的 `LICENSE` 中。
 - 内容核对：两份 `SKILL.md` 与上游提交 [`82d31402caa0db1790026824399044538483171b`](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/tree/82d31402caa0db1790026824399044538483171b) 对应文件一致，比较时忽略换行符类型和文件末尾空白。
 
-本合集通过主技能明确研究事实、技术含义和必要条件的优先级。使用这些叙事规则时，仍须保留影响核心结论的数据、限制和实际发现。
+本合集通过 M02、M03 模块明确学术适配规则以及研究事实、技术含义和必要条件的优先级。使用这些叙事规则时，仍须保留影响核心结论的数据、限制和实际发现。
 
 ## Humanizer
 
@@ -33,7 +33,7 @@
 `control-paper-authoring` 和 `ieee-control-writing` 提供控制论文的任务组织、作者视角、专业语义约束及句式参考。
 
 - IEEE 句式的初始语料与短引文见 [`source-basis.md`](skills/ieee-control-writing/references/source-basis.md)。
-- TASE 实验叙事的实例与来源见 [`tase-experiment-narrative.md`](skills/control-paper-authoring/references/tase-experiment-narrative.md)。
+- TASE 实验叙事的实例与来源见 [`tase-source-notes.md`](skills/control-paper-authoring/references/tase-source-notes.md)。
 - 参考文献的作者及出版方保留对其原作的权利。链接到这些论文用于说明写作参考依据，不表示作者或刊会认可、参与或背书本项目。
 
-公开仓库中的 `ieee-control-writing/SKILL.md` 删除了原安装环境的绝对磁盘路径，保留原有相对依赖路径和写作规则。
+所有配套技能路径保持可移植。第三方技能原件本次未修改；控制与 IEEE 写作规则经过模块化整理，变化见改动日志。

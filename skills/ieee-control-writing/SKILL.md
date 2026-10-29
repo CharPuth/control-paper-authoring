@@ -1,70 +1,37 @@
 ---
 name: ieee-control-writing
-description: "Draft, revise, translate, and polish English control-systems papers using clear terminology and scenario-specific sentence patterns drawn from IEEE control-paper examples. Use for requests about IEEE/TAC academic style, common control-paper sentence structures, plain academic English, natural manuscript language, or preserving technical content during language editing. Covers models, controllers, implementation, experiments, abstracts, introductions, and conclusions."
+description: >-
+  Draft, revise, translate, and polish English control-system prose using
+  sentence frames selected by definition, assumption, design, derivation,
+  implementation, observation, and interpretation. Use for IEEE/TAC-style
+  control-paper sentences and precise academic terminology. Preserve technical
+  content; patterns are editorial guidance, not official IEEE requirements.
 ---
 
-# IEEE Control Paper Writing
+# M04 IEEE control-paper sentence patterns
 
-Write precise, readable control-engineering prose. Choose sentence structures by what the sentence must do: define, assume, derive, design, implement, compare, or interpret. A consistent style is desirable; mechanical repetition and forced variation are not.
+Choose wording by the operation the sentence performs. Use the references as a menu, not a paragraph template. Square brackets mark teaching placeholders; replace them only with supplied facts.
 
-This is an editorial skill, not an official IEEE style standard or a guarantee of journal quality. Its initial source corpus contains two IEEE Transactions on Automatic Control papers. See [source-basis.md](references/source-basis.md) for the sources, limits, and distinction between observed wording and original editorial patterns.
+## Scope and integration
 
-## First steps
+When called by control-paper-authoring, use its active field profile and task scope. Do not restart its intake or reread modules already loaded. Requests to another module resolve through that active profile, including M01 for structure, M03 for natural language, M05 for vocabulary, and M06 for technical meaning.
 
-1. Determine the requested operation: language-only revision, translation, new drafting from supplied facts, or substantive restructuring. Default to language-only revision when asked to polish existing text.
-2. For English manuscript writing, read the companion `../anti-defensive-writing-en/SKILL.md` before drafting unless it has already been read in the current context. Resolve this path relative to the current skill directory. Respect host restrictions on repeated file reads. If unavailable, do not claim to have used it. This skill remains usable without silently installing dependencies.
-3. Briefly identify the writing skills being used. Keep this process note outside the manuscript.
-4. Establish a compact fact ledger from the supplied text and author confirmations: notation, coordinate frames, method architecture, assumptions, timing, parameter roles, evaluation windows, statistics, and claims. Preserve established answers rather than repeatedly asking for independent verification.
-5. Read the relevant references below. Use their sentence frames as options, not a fill-in template that every paragraph must follow.
+When used alone, default to language-only revision for existing prose. Read the target-language anti-defensive-writing skill before manuscript writing, then use the sibling [control profile](../control-paper-authoring/profiles/control.md) for the relevant author-voice, style, and evidence modules when available. Announce the skills actually read outside manuscript text. Missing companions do not authorize installation or claims that they were used; continue with the facts and frames available here.
+
+Preserve methods, notation, equations, assumptions, signal timing, data, statistics, citations, and claim scope. Correct an excessive scope only when the supplied evidence clearly establishes the narrower statement, and report that change. Ask before resolving uncertain scientific claims or adverse findings that affect a core conclusion or key comparison. Keep these questions outside the manuscript.
 
 ## Reference routing
 
-| Writing task | Reference |
+| Function | Read |
 | --- | --- |
-| Notation, dynamics, controller design, equations, implementation | [model-and-control-patterns.md](references/model-and-control-patterns.md) |
-| Experimental setup, comparisons, metrics, results, captions | [experiments-and-results.md](references/experiments-and-results.md) |
-| Abstract, introduction, related work, contributions, discussion, conclusion | [manuscript-sections.md](references/manuscript-sections.md) |
-| Plain vocabulary, natural sentence structure, before/after examples, editing passes | [natural-style-and-editing.md](references/natural-style-and-editing.md) |
-| Source attribution, dated quartile evidence, extending the corpus | [source-basis.md](references/source-basis.md) |
+| Definitions, equations, models, design, derivation, implementation | [model-and-control-patterns.md](references/model-and-control-patterns.md) |
+| Experimental setup, comparison, metrics, findings, captions | [experiments-and-results.md](references/experiments-and-results.md) |
+| Abstract, introduction, contributions, transitions, discussion, conclusion | [manuscript-sections.md](references/manuscript-sections.md) |
+| Word choice, collocations, ambiguous technical terms | Current profile M05; standalone fallback: [vocabulary-and-usage.md](references/vocabulary-and-usage.md) |
+| Sources, observed excerpts, corpus extension | [source-basis.md](references/source-basis.md), only when needed |
 
-## Content-preservation contract
+## Sentence decisions
 
-- Preserve scientific content during language-only editing: equations, variable meanings, inequalities, assumptions, algorithm order, sampling indices, experimental facts, numbers, units, citations, and claim scope.
-- Do not change a controller output into an applied actuator force, a model-tracking error into a command-tracking error, or a parameter-update direction into a complete update law.
-- Preserve qualifiers that carry meaning, including local, nominal, measured, estimated, previous, mean, per-condition, and under the stated assumptions.
-- Accept author-confirmed research facts as writing inputs. Do not insert internal verification questions or statements of personal uncertainty into submission prose merely because the agent has not rerun the experiments.
-- Do not invent results, guarantees, optimal tuning, matched bandwidths, statistical significance, experimental procedures, or contributions. Do not hide conditions or findings that materially change the interpretation of the main result.
-- If a proposed improvement would change the science or requires an unresolved fact, leave the affected claim unchanged and ask one focused question outside the manuscript. Continue editing unrelated passages.
-- Do not import the reference papers' assumptions, algorithms, stability results, or citations into the user's manuscript merely because their wording was consulted.
+Name the actual object and action. Definitions may use passive voice; implemented actions may use a controller as subject; comparisons may use the metric as subject. Parallel definitions may repeat conventional wording. Do not rotate synonyms or force sentence-length variation.
 
-## Voice and sentence selection
-
-Use the research authors' perspective. State the method, action, object, and result directly. Prefer common control-engineering terms over ornamental substitutes, but retain a long word when it is the established and precise term.
-
-Choose the verb according to the logical operation:
-
-| Operation | Typical wording |
-| --- | --- |
-| Definition | is defined as; denotes |
-| System description | is described by; is given by |
-| Assumption | is assumed to; we assume that |
-| Design choice | is selected as; we choose |
-| Derivation | substituting ... into ... gives; it follows from ... that |
-| Implementation | is computed from; is updated using |
-| Observation | Figure ... shows; the mean ... is lower than |
-| Interpretation | indicates ... under the tested conditions |
-
-Use active and passive constructions according to emphasis. Repeat a conventional equation lead-in when it fits. Do not rotate synonyms, alternate voices, insert conversational wording, or vary sentence length merely to look human. Pronouns are acceptable when their referents are immediate and unambiguous.
-
-## Editing procedure
-
-1. Read each necessary manuscript source once when the host requires a one-pass file workflow. Plan all changes from that source snapshot.
-2. For a full-manuscript language revision, use three distinct passes over the available text: terminology and collocations; sentence structure and references; technical meaning and prose-to-equation/result consistency. For a short passage, apply these lenses proportionately without inventing a multi-pass ceremony.
-3. Change only identified problems. Do not rewrite every sentence or make the paper uniformly short, uniformly passive, or uniformly ornate.
-4. Before applying edits, compare each candidate with its source for preserved meaning. If the user authorized only language changes, separate any substantive suggestions from the edits.
-5. Apply edits in the file workflow permitted by the host. Do not create extra reports, modify global instructions, change figures, recalculate statistics, compile documents, or run validators unless requested or otherwise authorized.
-6. Report what was actually done. When a change list is requested, provide location, original sentence, specific problem, and revised sentence. Do not claim a number of completed passes, independent reviewers, or layout checks that did not occur.
-
-## Delivery
-
-Return polished manuscript text or update the requested files. Keep explanations, unresolved questions, and editorial notes outside submission prose. State the revision scope briefly. Never promise acceptance, a quartile-level standard, or text that is guaranteed to evade AI detection.
+Use the actual source snapshot to check meaning. Follow the active workflow for file edits and checks; editing prose does not authorize rerunning research experiments or changing results. Return final text or the requested file changes, with unresolved issues outside the manuscript. Do not import the source papers' scientific assumptions, results, or citations merely because their style was consulted.
